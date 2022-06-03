@@ -1,0 +1,83 @@
+    body {
+        font-family: "Inter", sans-serif;
+        margin: 5px;
+    }
+    
+    .title {
+        color: white;
+        font-size: larger;
+        font-weight: 600;
+        letter-spacing: 0.03rem;
+        text-align: center;
+        background-color: #646FD4;
+        border-radius: 3px;
+    }
+    
+    .btn {
+        color: white;
+        background-color: #646FD4;
+    }
+    
+    .btn:hover {
+        color: white;
+        background-color: #9BA3EB;
+    }
+    
+    .topContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 15px;
+    }
+    
+    .searchbarContainer {
+        background-color: #242F9B;
+        border-radius: 3px;
+    }
+    
+    .search-n-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        height: 15vh;
+    }
+    
+    #loader {
+        color: #646FD4;
+    }
+    
+    .searchbarInput {
+        border: #646FD4 3px solid;
+        border-radius: 3px;
+        height: 38px;
+    }
+    
+    .loader {
+        border: 3px solid blue;
+    }
+    
+    .listContainer {
+        margin-top: 15px;
+        width: max-content;
+        margin: auto;
+        padding: 10px;
+        background-color: #9BA3EB;
+        border: #646FD4 5px solid;
+        border-radius: 3px;
+    }
+    
+    .searchbarList {
+        width: max-content;
+        font-size: larger;
+        font-weight: 600;
+        letter-spacing: 0.03rem;
+    }
+    
+    .searchbarList a {
+        color: #242F9B;
+    }
+    
+    .searchbarList a:hover {
+        color: #646FD4;
+    }
