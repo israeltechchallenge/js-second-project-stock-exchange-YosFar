@@ -1,0 +1,67 @@
+body {
+    font-family: "Inter", sans-serif;
+    margin: auto;
+    background-color: rgb(128, 128, 255);
+}
+
+.container {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin-top: 15px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid blue;
+}
+
+.contentContainer {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    padding: 30px;
+    width: 100%;
+}
+
+.name-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.name-img img {
+    width: 50px;
+}
+
+.companyName {
+    font-size: xx-large;
+}
+
+.companyIndustry {
+    font-size: x-large;
+}
+
+.symbol-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-left: 50px;
+}
+
+.companyDescription {
+    padding: 45px;
+    font-size: large;
+    text-align: center;
+    background-color: rgb(128, 128, 255);
+    color: #fff;
+    border-radius: 10px;
+}
+
+.companyPrice {
+    font-size: large;
+}
+
+#history {
+    margin: auto;
+    padding: 25px;
+}

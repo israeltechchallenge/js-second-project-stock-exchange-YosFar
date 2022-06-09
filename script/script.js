@@ -14,11 +14,8 @@ let getValueInput = () => {
 
             function getValue(value) {
                 txt += `<a href="/company.html?symbol=${value.symbol}">${value.name} (${value.symbol})</a>` + "<br>"
-
-                console.log(value.name);
             }
 
 
         })
-
 }
