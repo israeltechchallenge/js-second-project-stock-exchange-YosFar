@@ -2,6 +2,7 @@ const parsedUrl = new URL(window.location.href);
 const companySymbol = parsedUrl.searchParams.get("symbol");
 const companyUrl = `https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com/api/v3/company/profile/${companySymbol}`;
 const historyUrl = `https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com/api/v3/historical-price-full/${companySymbol}?serietype=line`;
+console.log(companySymbol);
 //HIDE LOADER
 function hideloader() {
     document.getElementById('loading').style.display = 'none';
@@ -28,11 +29,13 @@ function show(data) {
     <div class="contentContainer">
     <div class="name-img">
     <img src='${h.image}'>
+    <div class="nameIndustry">
     <div class="companyName">${h.companyName}</div>
     <div class="companyIndustry">(${h.industry})</div>
     </div>
+    </div>
     <div class="symbol-price"> 
-    <div class="companyPrice">Stock price:$ ${h.price}</div>
+    <div class="companyPrice">Stock price: $ ${h.price}</div>
     <div class="companyPercent"> (${h.changesPercentage})</div>
     </div>
     </div>
@@ -51,7 +54,7 @@ async function chartIt() {
     const data = {
         labels: xdates,
         datasets: [{
-            label: 'Stock price over the years',
+            label: 'Stock price',
             backgroundColor: 'rgb(0, 0, 255)',
             borderColor: 'rgb(128, 128, 255)',
             data: xclose,

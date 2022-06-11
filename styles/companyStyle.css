@@ -1,7 +1,6 @@
 body {
     font-family: "Inter", sans-serif;
     margin: auto;
-    background-color: rgb(128, 128, 255);
 }
 
 .container {
@@ -10,42 +9,75 @@ body {
     border-radius: 10px;
     text-align: center;
     background-color: #fff;
-    border: 1px solid blue;
+    border: 3px solid rgb(128, 128, 255);
+}
+
+#info {
+    border-bottom: 3px solid rgb(128, 128, 255);
+    margin-top: 10px;
+    padding-bottom: 25px;
 }
 
 .contentContainer {
     display: flex;
     justify-content: center;
-    gap: 3px;
-    padding: 30px;
-    width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .name-img {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
+    padding: 15px;
 }
 
 .name-img img {
-    width: 50px;
+    width: 130px;
+}
+
+.nameIndustry {
+    align-self: center;
+    margin-left: 15px;
+    padding: 15px;
+    border-radius: 10px;
 }
 
 .companyName {
-    font-size: xx-large;
+    color: rgb(128, 128, 255);
+    font-size: x-large;
 }
 
 .companyIndustry {
-    font-size: x-large;
+    background-color: rgb(128, 128, 255);
+    color: #fff;
+    padding: 5px;
+    font-size: large;
+    border-radius: 10px;
 }
 
 .symbol-price {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    margin-left: 50px;
+    flex-direction: column;
+    padding: 15px;
+    background-color: rgb(128, 128, 255);
+    border-radius: 10px;
+}
+
+.companyPrice {
+    padding: 5px;
+    color: #fff;
+    /* cambiar a blanco*/
+    font-size: large;
+}
+
+.companyPercent {
+    background-color: white;
+    /* cambiar a blanco*/
+    color: rgb(128, 128, 255);
+    /* cambiar a purple*/
+    padding: 5px;
+    font-size: large;
+    border-radius: 10px;
 }
 
 .companyDescription {
@@ -55,13 +87,18 @@ body {
     background-color: rgb(128, 128, 255);
     color: #fff;
     border-radius: 10px;
-}
-
-.companyPrice {
-    font-size: large;
+    margin: 20px 150px;
 }
 
 #history {
     margin: auto;
-    padding: 25px;
+    padding: 10%;
+}
+
+#history h1 {
+    color: rgb(128, 128, 255);
+    border: 3px solid rgb(128, 128, 255);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 30px;
 }

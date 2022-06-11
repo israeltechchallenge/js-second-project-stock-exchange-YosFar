@@ -1,77 +1,102 @@
-    body {
-        font-family: "Inter", sans-serif;
-        margin: auto;
-        background-color: rgb(128, 128, 255);
-    }
-    
-    .container {
-        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-        margin-top: 15px;
-        height: 700px;
-        border-radius: 10px;
-        text-align: center;
-        background-color: #fff;
-        border: 1px solid blue;
-    }
-    
-    .what {
-        margin-top: 15px;
-        font-size: x-large;
-        color: rgb(128, 128, 255);
-    }
-    
-    .search-n-btn {
-        margin-top: 15px;
-        display: flex;
-        gap: 5px;
-        justify-content: center;
-    }
-    
-    .searchbarInput {
-        height: 40px;
-        width: 90%;
-        border-color: rgb(128, 128, 255);
-        outline-style: none;
-        border-radius: 3px;
-    }
-    
-    .btn {
-        color: #fff;
-        background-color: rgb(128, 128, 255);
-    }
-    
-    .btn:hover {
-        color: #fff;
-        background-color: blue;
-    }
-    
-    .listContainer {
-        text-align: center;
-        margin: auto;
-        margin-top: 50px;
-        background-color: rgb(128, 128, 255);
-        border-radius: 5px;
-        padding: 15px;
-    }
-    
-    .searchbarList a {
-        color: #fff;
-        font-size: xx-large;
-    }
-    
-    .searchbarList a:hover {
-        font-size: xx-large;
-        color: blue;
-        text-decoration: none;
-        background-color: rgba(128, 128, 255, 0.148);
-    }
-    
-    #loader {
-        margin-top: 20px;
-    }
-    
-    .footer {
-        font-size: medium;
-        text-align: center;
-        color: #fff;
-    }
+body {
+    font-family: "Inter", sans-serif;
+    margin: auto;
+}
+
+.container {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin-top: 15px;
+    height: fit-content;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #fff;
+    border: 3px solid rgb(128, 128, 255);
+}
+
+.what {
+    margin-top: 15px;
+    font-size: x-large;
+    color: rgb(128, 128, 255);
+}
+
+.search-n-btn {
+    margin-top: 15px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.searchbarInput {
+    height: 40px;
+    width: 90%;
+    border-color: rgb(128, 128, 255);
+    outline-style: none;
+    border-radius: 3px;
+}
+
+.btn {
+    color: #fff;
+    background-color: rgb(128, 128, 255);
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: blue;
+}
+
+.listContainer {
+    margin: auto;
+    margin-top: 50px;
+    background-color: rgb(128, 128, 255);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+li {
+    list-style: none;
+    background-color: rgb(177, 177, 255);
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    padding: 5px 5px 5px 100px;
+}
+
+li img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: xx-small;
+    color: black;
+}
+
+li a {
+    font-size: large;
+}
+
+.greenClass {
+    color: rgb(0, 255, 0);
+}
+
+.redClass {
+    color: rgb(255, 0, 0);
+}
+
+#loader {
+    margin-top: 20px;
+}
+
+.footer {
+    font-size: large;
+    text-align: center;
+    color: #fff;
+    background-color: rgb(128, 128, 255);
+    position: sticky;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin: 10px;
+    padding: 5px;
+}
