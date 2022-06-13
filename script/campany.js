@@ -3,7 +3,6 @@ const companySymbol = parsedUrl.searchParams.get("symbol");
 const baseUrl = `https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com/api/v3`;
 const companyUrl = `${baseUrl}/company/profile/${companySymbol}`;
 const historyUrl = `${baseUrl}/historical-price-full/${companySymbol}?serietype=line`;
-console.log(companySymbol);
 //HIDE LOADER
 function hideloader() {
     document.getElementById('loading').style.display = 'none';
@@ -26,6 +25,7 @@ getapi(companyUrl);
 // DISPLAY DATA
 function show(data) {
     let h = data.profile;
+    let perc = h.changesPercentage;
     let content = `
     <div class="contentContainer">
     <div class="name-img">
@@ -37,13 +37,18 @@ function show(data) {
     </div>
     <div class="symbol-price"> 
     <div class="companyPrice">Stock price: $ ${h.price}</div>
-    <div class="companyPercent"> (${h.changesPercentage})</div>
+    <div id="x" class="companyPercent"> (${perc}%)</div>
     </div>
     </div>
     <div class="companyDescription">${h.description}</div>
-    
-    `
+`
     document.getElementById("info").innerHTML = content;
+    if (perc <= 0) {
+        document.getElementById("x").style.color = "red";
+    } else {
+        document.getElementById("x").style.color = "yellowgreen";
+    }
+
 }
 
 //Chart
@@ -64,15 +69,7 @@ async function chartIt() {
     const config = {
         type: 'line',
         data: data,
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        reverse: true
-                    }
-                }]
-            }
-        },
+        options: {},
     };
     const myChart = new Chart(
         document.getElementById('myChart'),

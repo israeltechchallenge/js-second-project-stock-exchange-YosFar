@@ -18,9 +18,16 @@ let getValueInput = async() => {
         let extraData = await extraResponse.json();
         let profile = extraData.profile;
         list +=
-            `<a href="/company.html?symbol= ${extraData.symbol}"><img src="${profile.image}" alt='${profile.companyName}'> <div>${profile.companyName} (${extraData.symbol})</div>${profile.changes}%`;
+            `<a href="/company.html?symbol= ${extraData.symbol}"><img src="${profile.image}" alt='${profile.companyName}'> <div>${profile.companyName} (${extraData.symbol})</div><div id="x">${profile.changes}%</div> `;
+
         document.getElementById("listContainer").innerHTML = list;
+        if (profile.changes <= 0) {
+            document.getElementById("x").style.color = 'red';
+        } else {
+            document.getElementById("x").style.color = 'greenYellow';
+        }
     }
+
     document.getElementById("beforeTitle").style.visibility = "hidden";
     document.getElementById("afterTitle").style.visibility = "visible";
     loader.classList.remove('spinner-border');
