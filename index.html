@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Exchange</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon(1).ico">
     <link href="https://fonts.googleapis.com/css?family=Inter:400,800,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
@@ -13,19 +14,23 @@
 </head>
 
 <body>
+    <div class="header">
+        <img src="./assets/logoStock.jpg">
+        <span>Stock market project by Yosi Farchi | March 2022 full stack course | Israel Tech Challenge (ITC)  </span>
+    </div>
+    <div id="marquee"></div>
     <div class="container">
-        <div class="what">What company are you looking for?</div>
+        <div id="beforeTitle" class="what">What company stock are you looking for?</div>
         <div class="search-n-btn">
             <input id="searchbarInput" class="searchbarInput" type="text" placeholder="Search Company" />
             <button id="searchBtn" class="btn" onclick="getValueInput()">Search</button>
         </div>
-
-        <div class="listContainer">
-            <ul id="searchResultList" class="searchResultList"></ul>
-        </div>
+        <div id="afterTitle" class="what">Here is a list of matches, click on a company to learn more!</div>
+        <div id="listContainer" class="listContainer"></div>
         <div id="loader"></div>
     </div>
-    <footer class="footer">Stock market project (ITC) by Yosi Farchi</footer>
+
+
     <script src="./script/script.js"></script>
 </body>
 

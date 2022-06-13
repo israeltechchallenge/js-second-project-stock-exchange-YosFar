@@ -1,7 +1,8 @@
 const parsedUrl = new URL(window.location.href);
 const companySymbol = parsedUrl.searchParams.get("symbol");
-const companyUrl = `https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com/api/v3/company/profile/${companySymbol}`;
-const historyUrl = `https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com/api/v3/historical-price-full/${companySymbol}?serietype=line`;
+const baseUrl = `https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com/api/v3`;
+const companyUrl = `${baseUrl}/company/profile/${companySymbol}`;
+const historyUrl = `${baseUrl}/historical-price-full/${companySymbol}?serietype=line`;
 console.log(companySymbol);
 //HIDE LOADER
 function hideloader() {
@@ -93,3 +94,18 @@ async function getHistory() {
         xclose.push(close)
     });
 }
+
+
+let marqueeFunc = async() => {
+    const marqueeUrl = `${baseUrl}/quotes/nasdaq`;
+    let marqueeResponse = await fetch(marqueeUrl);
+    let marqueeData = await marqueeResponse.json();
+    let marqueeList = "";
+    marqueeData.forEach(getValueMarquee);
+    async function getValueMarquee(mar) {
+        marqueeList += `<div>${mar.symbol}  <span>$${mar.price}</span> </div>`;
+    }
+    document.getElementById("marquee").innerHTML = marqueeList;
+
+}
+marqueeFunc();
