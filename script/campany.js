@@ -21,7 +21,6 @@ async function getapi(url) {
     show(data);
 }
 getapi(companyUrl);
-
 // DISPLAY DATA
 function show(data) {
     let h = data.profile;
@@ -40,17 +39,14 @@ function show(data) {
     <div id="x" class="companyPercent"> (${perc}%)</div>
     </div>
     </div>
-    <div class="companyDescription">${h.description}</div>
-`
+    <div class="companyDescription">${h.description}</div>`;
     document.getElementById("info").innerHTML = content;
     if (perc <= 0) {
         document.getElementById("x").style.color = "red";
     } else {
         document.getElementById("x").style.color = "yellowgreen";
     }
-
 }
-
 //Chart
 const xdates = [];
 const xclose = [];
@@ -83,8 +79,8 @@ async function getHistory() {
     if (response) {
         hideloader1();
     }
-    const x = data.historical;
-    x.forEach((el) => {
+    const hd = data.historical;
+    hd.forEach((el) => {
         const day = el.date;
         xdates.push(day);
         const close = el.close;
@@ -92,17 +88,26 @@ async function getHistory() {
     });
 }
 
-
-let marqueeFunc = async() => {
-    const marqueeUrl = `${baseUrl}/quotes/nasdaq`;
-    let marqueeResponse = await fetch(marqueeUrl);
-    let marqueeData = await marqueeResponse.json();
+//Marquee class 
+class Marquee {
+    constructor(sign) {
+        this.sign = sign
+    }
+    async getData() {
+        const response = await fetch(baseUrl + this.sign)
+        const data = await response.json();
+        return data;
+    }
+}
+//call marquee class and display data
+async function marqueeFunc() {
+    let marqueeContent = new Marquee('/quotes/nasdaq')
+    const data = await marqueeContent.getData();
     let marqueeList = "";
-    marqueeData.forEach(getValueMarquee);
-    async function getValueMarquee(mar) {
-        marqueeList += `<div>${mar.symbol}  <span>$${mar.price}</span> </div>`;
+    data.forEach(getValueMarquee);
+    async function getValueMarquee(e) {
+        marqueeList += `<div>${e.symbol} <span>$${e.price}</span> </div>`;
     }
     document.getElementById("marquee").innerHTML = marqueeList;
-
 }
 marqueeFunc();
