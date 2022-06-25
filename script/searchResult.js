@@ -1,11 +1,3 @@
-/*1. Juntar nombre de empresa y simbolo enh 1 string.
-2. Buscar en ese string los matches que hayan con el texto introducido en la búsqueda.
-3. En el indice de los caractéres que hagan match debe partirse el string para crear un array,
- y meterse un <span class=hilight> adelante y un </span> atr'as.
-Reuven Farchi
-12:04 AM
-El resultado es, ante la b'usqueda "tes", <span class=-"highlight">tes</span>la TSL */
-
 const clickBtn = document.getElementById("searchBtn");
 const valueInput = document.getElementById("searchbarInput");
 const resultList = document.getElementById("results");
