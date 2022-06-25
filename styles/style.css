@@ -45,7 +45,7 @@ body {
     background-color: rgb(190, 190, 255);
 }
 
-.listContainer {
+#results {
     margin: auto;
     margin-top: 20px;
     background-color: rgb(128, 128, 255);
@@ -56,7 +56,7 @@ body {
     gap: 15px;
 }
 
-.listContainer a {
+#results a {
     background-color: rgb(200, 200, 255);
     border: 3px solid white;
     border-radius: 5px;
@@ -70,17 +70,17 @@ body {
     text-decoration: none;
 }
 
-.listContainer a:hover {
+#results a:hover {
     background-color: rgb(190, 190, 255);
 }
 
-.listContainer div {
+#results div {
     display: inline-block;
     color: rgb(128, 128, 255);
     font-size: x-large;
 }
 
-.listContainer img {
+#results img {
     border: 3px solid white;
     width: 65px;
     height: 65px;

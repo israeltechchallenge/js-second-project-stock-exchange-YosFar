@@ -1,8 +1,41 @@
-//declaration of global variables ans atriniutes
-const baseUrl = 'https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com/api/v3';
-document.getElementById("beforeTitle").style.visibility = "visible";
-document.getElementById("afterTitle").style.visibility = "hidden";
-//get input value + search in data and display result
+class Form {
+    createTheForm() {
+        let htmlAll = `<div class="container">
+        <div id="beforeTitle" class="what">What company stock are you looking for?</div>
+         <div class="search-n-btn">
+             <input id="searchbarInput" class="searchbarInput" type="text" placeholder="Search Company" />
+             <button id="searchBtn" class="btn" onclick="searchFunc()">Search</button>
+         </div>
+         <div id="afterTitle" class="what">Here is a list of matches, click on a company to learn more!</div>
+         <div id="listContainer" class="listContainer"></div>
+         <div id="loader"></div>
+     </div> `
+        document.getElementById("form").innerHTML = htmlAll;
+    }
+}
+let myForm = new Form();
+myForm.createTheForm();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 let getValueInput = async() => {
         const valueInput = document.getElementById("searchbarInput");
         const loader = document.getElementById('loader');
@@ -36,26 +69,4 @@ let getValueInput = async() => {
         document.getElementById("afterTitle").style.visibility = "visible";
         loader.classList.remove('spinner-border');
     }
-    //create marquee class
-class Marquee {
-    constructor(sign) {
-        this.sign = sign;
-    }
-    async getData() {
-        const response = await fetch(baseUrl + this.sign)
-        const data = await response.json();
-        return data;
-    }
-}
-//call marquee class and display data
-async function marqueeFunc() {
-    let marqueeContent = new Marquee('/quotes/nasdaq');
-    const data = await marqueeContent.getData();
-    let marqueeList = "";
-    data.forEach(getValueMarquee);
-    async function getValueMarquee(e) {
-        marqueeList += `<div>${e.symbol} <span>$${e.price}</span> </div>`;
-    }
-    document.getElementById("marquee").innerHTML = marqueeList;
-}
-marqueeFunc();
+*/
