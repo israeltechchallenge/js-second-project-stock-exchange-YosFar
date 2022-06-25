@@ -4,7 +4,7 @@ class Form {
         <div id="beforeTitle" class="what">What company stock are you looking for?</div>
          <div class="search-n-btn">
              <input id="searchbarInput" class="searchbarInput" type="text" placeholder="Search Company" />
-             <button id="searchBtn" class="btn" onclick="searchFunc()">Search</button>
+             <button id="searchBtn" class="btn" >Search</button>
          </div>
          <div id="afterTitle" class="what">Here is a list of matches, click on a company to learn more!</div>
          <div id="listContainer" class="listContainer"></div>
