@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/companyStyle.css">
+    <title>Company</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon(1).ico">
+</head>
+
+<body>
+    <div class="header">
+        <a href="./index.html"><img src="./assets/logoStock.jpg"></a>
+        <span>Stock market project by Yosi Farchi | March 2022 full stack course | Israel Tech Challenge (ITC)  </span>
+    </div>
+    <div id="marquee"></div>
+    <div class="container">
+        <div id="info">
+            <div class="spinner-border" role="status" id="loading"></div>
+        </div>
+
+        <div id="history">
+            <h1>Stock history graph</h1>
+            <div class="spinner-border" role="status" id="loading1"></div>
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+    <script src="./script/campany.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+
+</html>

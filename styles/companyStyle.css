@@ -1,0 +1,154 @@
+body {
+    font-family: "Inter", sans-serif;
+    margin: auto;
+}
+
+.container {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin-top: 15px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #fff;
+    border: 3px solid rgb(128, 128, 255);
+}
+
+#info {
+    border-bottom: 3px solid rgb(128, 128, 255);
+    margin-top: 10px;
+    padding-bottom: 25px;
+}
+
+.contentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.name-img {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.name-img img {
+    width: 130px;
+}
+
+.nameIndustry {
+    align-self: center;
+    margin-left: 15px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.companyName {
+    color: rgb(128, 128, 255);
+    font-size: x-large;
+}
+
+.companyIndustry {
+    background-color: rgb(128, 128, 255);
+    color: #fff;
+    padding: 5px;
+    font-size: large;
+    border-radius: 10px;
+}
+
+.symbol-price {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: rgb(128, 128, 255);
+    border-radius: 10px;
+}
+
+.companyPrice {
+    padding: 5px;
+    color: #fff;
+    /* cambiar a blanco*/
+    font-size: large;
+}
+
+.companyPercent {
+    background-color: white;
+    /* cambiar a blanco*/
+    color: rgb(128, 128, 255);
+    /* cambiar a purple*/
+    padding: 5px;
+    font-size: large;
+    border-radius: 10px;
+}
+
+.companyDescription {
+    padding: 45px;
+    font-size: large;
+    text-align: center;
+    background-color: rgb(128, 128, 255);
+    color: #fff;
+    border-radius: 10px;
+    margin: 20px 150px;
+}
+
+#history {
+    margin: auto;
+    padding: 10%;
+}
+
+#history h1 {
+    color: rgb(128, 128, 255);
+    border: 3px solid rgb(128, 128, 255);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.header {
+    color: #fff;
+    background-color: rgb(128, 128, 255);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.header span {
+    font-size: x-large;
+    font-weight: 700;
+    margin-left: 80px;
+}
+
+.header img {
+    height: 75px;
+    width: 75px;
+    border: 3px solid white;
+    border-radius: 5px;
+    margin-left: 50px;
+}
+
+@keyframes animate {
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+#marquee {
+    background-color: rgb(128, 128, 255);
+    margin-top: 1px;
+    width: max-content;
+    height: 30px;
+    animation: animate 6500s linear infinite;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+}
+
+#marquee div {
+    color: white;
+    display: inline;
+    list-style-type: none;
+    width: fit-content;
+    margin-right: 15px;
+}
+
+#marquee div span {
+    color: rgb(170, 255, 0);
+}
